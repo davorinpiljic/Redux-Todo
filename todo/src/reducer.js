@@ -28,7 +28,7 @@ const initialState = {
           case DELETE_TODO: 
           return {
             ...state,
-            todo: state.todo.filter((element, key) => action.payload != key)
+            todo: state.todo.filter((element, key) => action.payload !== key)
           };
   
       default:

@@ -1,8 +1,7 @@
 import React from 'react'
 import { addTodo, toggleTodo } from './actions';
 import { connect } from 'react-redux';
-
-
+import { Button, Form, Input } from 'reactstrap';
 
 class InputForm extends React.Component {
     constructor(props) {
@@ -20,24 +19,23 @@ class InputForm extends React.Component {
     addTodo = (event) => {
         event.preventDefault()
         this.props.addTodo(this.state.task)
-        console.log('clicked')
+        this.setState({task: ''})
     }
 
     render() {
-        return(      <div className="form-group">
-        <form onSubmit={this.addTodo}>
-          <input
-            class="form-control"
+        return(      <div >
+        <Form inline className="form" onSubmit={this.addTodo}>
+          <Input
             onChange={this.handleInput}
             placeholder="todo"
             value={this.state.task}
             name="task"
           />
-          <button 
+          <Button
+            color="primary" 
             type="submit" 
-            class="btn btn-primary"
-          >Submit ToDo</button>
-        </form>
+          >Add Todo</Button>
+        </Form>
       </div>)
     }
 }
