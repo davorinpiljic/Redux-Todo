@@ -13,7 +13,6 @@ class InputForm extends React.Component {
 
     handleInput = event => {
         this.setState( {task: event.target.value})
-        console.log(this.state.task)
     }
 
     addTodo = (event) => {
@@ -27,7 +26,7 @@ class InputForm extends React.Component {
         <Form inline className="form" onSubmit={this.addTodo}>
           <Input
             onChange={this.handleInput}
-            placeholder="todo"
+            placeholder="enter todo here..."
             value={this.state.task}
             name="task"
           />

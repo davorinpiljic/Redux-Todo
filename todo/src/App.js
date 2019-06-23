@@ -9,12 +9,12 @@ import { Jumbotron } from 'reactstrap';
 function App() {
   return (
     <div className="App">
-      <Jumbotron fluid>
-        <h1 className="display-3">Welcome to: Todo List</h1>
+      <span fluid className="todo-inside">
+        <h1 className="my-2">Todo List</h1>
         <hr className="my-2" />
         <TodoList />
         <InputForm />
-      </Jumbotron>
+      </span>
     </div>
   );
 }

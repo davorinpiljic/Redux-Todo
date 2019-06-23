@@ -21,10 +21,12 @@ class TodoList extends React.Component {
                return( 
                <div  className="todo" key={key}>
                     <h4  onClick={element => this.toggleTodo(element, key)} 
-                         style={element.completed ? { textDecoration: 'line-through', fontSize: '1.4rem', opacity: '.6'} : null}>
+                         style={element.completed ? { textDecoration: 'line-through',  opacity: '.3'} : null}>
                          {element.task}
                     </h4>
-                    <Badge  color="danger" 
+                    <Badge  
+                            className="danger"
+                            color="danger" 
                             onClick={element => this.deleteTodo(element, key)}>
                             x
                     </Badge>
