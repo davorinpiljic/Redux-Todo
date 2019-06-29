@@ -3,7 +3,7 @@ import { ADD_TODO, TOGGLE_TODO, DELETE_TODO } from './actions';
 const initialState = {
     todo: [
         {
-            task: 'dasdf',
+            task: 'dsfadadfasjdlfkjasldfjalsjdflsd',
             completed: false,
         }
     ],
@@ -13,6 +13,7 @@ const initialState = {
     switch (action.type) {
       case ADD_TODO:
             const newTodo = { task: action.payload, completed: false}
+
 
         return {
           ...state,
